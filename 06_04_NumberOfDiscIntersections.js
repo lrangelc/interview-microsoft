@@ -1,3 +1,6 @@
+console.clear();
+console.log(`NumberOfDiscIntersections`);
+
 function sortAsc(a, b) {
   return a - b;
 }
