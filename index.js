@@ -1,21 +1,23 @@
 console.clear();
+console.log(`PassingCars`);
 
-const A = [0, 1, 0, 1, 1];
-// const A =  [1, 3, 2];
+// const A = [0, 1, 0, 1, 1];
+const A = [0, 0, 1, 1, 0, 1, 1];
 
 function solution(A) {
+  let pairs = 0;
+  let acu1 = 0;
+  const total = A.reduce((a, b) => a + b, 0);
   if (A.length > 0) {
-    const uniq = (a) => [...new Set(a)];
-    const arrUniq = uniq(A);
-
-    const n = A.length;
-    const res = (n * (n + 1)) / 2;
-    const sum = A.reduce((a, b) => a + b, 0);
-    if (sum === res) {
-      return arrUniq.length === n ? 1 : 0;
-    }
+    A.forEach((element, index) => {
+      if (element === 0) {
+        pairs += total - acu1;
+      } else {
+        acu1++;
+      }
+    });
   }
-  return 0;
+  return pairs > 1000000000 ? -1 : pairs;
 }
 
 console.log(solution(A));
