@@ -1,36 +1,32 @@
 console.clear();
-console.log(`Fish`);
+console.log(`StoneWall`);
 
-const A = [4, 3, 2, 1, 5];
-const B = [0, 1, 0, 0, 0];
+const H = [8, 8, 5, 7, 9, 8, 7, 4, 8];
 
-function solution(A, B) {
-  const downStream = [];
-  const upStream = [];
-  let direction;
-
-  for (var i = 0; i < A.length; i++) {
-    direction = B[i];
-
-    if (direction === 0) {
-      while (downStream.length > 0) {
-        const d = downStream.pop();
-
-        if (d > A[i]) {
-          downStream.push(d);
-          break;
-        }
-      }
-
-      if (downStream.length === 0) {
-        upStream.push(A[i]);
-      }
+function solution(H) {
+  const stack = [];
+  let head = -1;
+  let block = 0;
+  let i = 0;
+  while (i < H.length) {
+    const h = H[i];
+    if (head < 0) {
+      ++head;
+      stack[head] = h; //stack push
+      ++i;
+    } else if (stack[head] == h) {
+      ++i;
+    } else if (stack[head] < h) {
+      ++head;
+      stack[head] = h; //stack push
+      ++i;
     } else {
-      downStream.push(A[i]);
+      //stack[head] > h
+      --head; //stack pop
+      ++block;
     }
   }
-
-  return downStream.length + upStream.length;
+  return block + head + 1;
 }
 
-console.log(solution(A, B));
+console.log(solution(H));
