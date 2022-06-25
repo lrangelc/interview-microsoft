@@ -1,5 +1,5 @@
 console.clear();
-console.log(`Merge Sort`);
+console.log(`Quicksort`);
 
 const baseArray = [10, -1, 2, 5, 0, 6, 4, -5];
 
