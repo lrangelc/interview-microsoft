@@ -23,6 +23,8 @@ function swapPairs(h) {
     temp.next.data = k;
     temp = temp.next.next;
   }
+
+  return head;
 }
 
 /* Utility functions */
@@ -63,10 +65,11 @@ push(1);
 console.log('Linked List before calling pairWiseSwap() <br/>');
 printList();
 
-swapPairs(head);
+console.log(swapPairs(head));
 
 console.log('Linked List after calling pairWiseSwap()<br/> ');
 printList();
+
 
 // Time complexity: O(N)
 
@@ -75,5 +78,3 @@ printList();
 // Auxiliary Space: O(1)
 
 // As constant extra space is used.
-
-// https://www.geeksforgeeks.org/pairwise-swap-elements-of-a-given-linked-list/
