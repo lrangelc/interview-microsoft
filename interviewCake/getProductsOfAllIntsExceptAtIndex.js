@@ -34,8 +34,8 @@ const getProductsOfAllIntsExceptAtIndex2 = (intArray) => {
   }
 
   const productsOfAllIntsExceptAtIndex = [];
-  intArray.forEach((element, index) => {
-    const result = intArray.filter((element, ind) => ind !== index);
+  intArray.forEach((ele, index) => {
+    const result = intArray.filter((_, ind) => ind !== index);
     const total = result.reduce((partial, a) => partial * a, 1);
     productsOfAllIntsExceptAtIndex.push(total);
   });
