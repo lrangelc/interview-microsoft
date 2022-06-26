@@ -68,7 +68,6 @@ swapPairs(head);
 console.log('Linked List after calling pairWiseSwap()<br/> ');
 printList();
 
-
 // Time complexity: O(N)
 
 // As we traverse the linked list only once.
@@ -76,3 +75,5 @@ printList();
 // Auxiliary Space: O(1)
 
 // As constant extra space is used.
+
+// https://www.geeksforgeeks.org/pairwise-swap-elements-of-a-given-linked-list/
