@@ -38,12 +38,11 @@ function isMatch(str, pattern) {
   return (dp[str.length][pattern.length] = finding(dp, str, pattern, str.length - 1, pattern.length - 1));
 }
 
-
 // let str = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
 // let pattern = '*b';
 
-let str = "baaabab";
-let pattern = "*****ba*****ab";
+let str = 'baaabab';
+let pattern = '*****ba*****ab';
 
 // char pattern[] = "ba*****ab";
 // char pattern[] = "ba*ab";
@@ -63,9 +62,8 @@ let pattern = "*****ba*****ab";
 if (isMatch(str, pattern)) console.log('Yes');
 else console.log('No');
 
-
 // https://www.geeksforgeeks.org/wildcard-pattern-matching/
 
-// Time complexity: O(m x n). 
+// Time complexity: O(m x n).
 
 // Auxiliary space:  O(m x n).
