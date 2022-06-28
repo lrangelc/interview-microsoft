@@ -1,5 +1,8 @@
 console.clear();
 console.log(`Merge Sort`);
+// Merge Sort is a recursive algorithm and time complexity can be expressed as following recurrence relation. 
+// The time complexity of MergeSort is O(n*Log n) in all the 3 cases (worst, average and best) as the mergesort always 
+// divides the array into two halves and takes linear time to merge two halves.
 
 const baseArray = [10, -1, 2, 5, 0, 6, 4, -5];
 

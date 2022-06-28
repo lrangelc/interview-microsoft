@@ -1,6 +1,14 @@
 console.clear();
 console.log(`Quicksort`);
 
+// The worst case time complexity of a typical implementation of QuickSort is O(n2). 
+// The worst case occurs when the picked pivot is always an extreme (smallest or largest) element. 
+// This happens when input array is sorted or reverse sorted and either first or last element is picked as pivot.
+
+// Worst complexity: n^2
+// Average complexity: n*log(n)
+// Best complexity: n*log(n)
+
 const baseArray = [10, -1, 2, 5, 0, 6, 4, -5];
 
 function swap(items, leftIndex, rightIndex) {
